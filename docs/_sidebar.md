@@ -14,7 +14,7 @@
   - [lesson 2](lesson2.md)
 
 - Contact
-  - [About us](about.rst)
+  - [About us](about.md)
   - [Contact us](contact.md)
 
 
