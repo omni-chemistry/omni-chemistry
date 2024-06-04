@@ -58,6 +58,7 @@ controller_manager.add_task("pour", {
 while not controller_manager.is_done():
     controller_manager.execute(current_observations)
 ```
+To facilitate a comprehensive understanding of the ControllerManager class’s functionality, it is essential to examine the initialization parameters of the add_controller and add_task methods. These parameters are pivotal in configuring the behavior of the robotic arm within the simulation environment. The subsequent table delineates each parameter, elucidating its purpose and significance.
 
 | Function     | Parameter | Description |
 | ----------- | ----------- | ----------- |
@@ -65,3 +66,6 @@ while not controller_manager.is_done():
 | add_controller   | controller_instance       |The actual instance of the controller object that will be managed by the ControllerManager. This object should implement the necessary methods for controlling the robot.       |
 | add_task    | controller_type      |A string indicating the type of controller that should be used for this task. This is used to select the appropriate controller from the list when the task is executed.       |
 | add_task   | 	param_template        |A dictionary that serves as a template for the parameters that will be passed to the controller when the task is executed. It can contain static values or functions that provide dynamic values based on the current state of the simulation.       |
+
+
+Furthermore, the execute function plays a critical role in the operation of the ControllerManager. Its primary purpose is to invoke the current task’s controller, passing the appropriate parameters as defined in the task’s parameter template. The logic within the execute function orchestrates the interaction between the controller and the simulation, ensuring that each task is performed correctly and in the designated order. This function retrieves the current observations from the simulation, generates the task parameters based on the template and observations, and then calls the controller’s forward method to execute the task. If the controller indicates that it has completed its task, the ControllerManager proceeds to the next task in the sequence.
