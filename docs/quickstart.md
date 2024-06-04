@@ -2,12 +2,11 @@
 
 # Quick Start
 
-Here we quickly go over the installation and demo commands
+**To run the demo of chemistry experiment, follow these steps:**
 
+```bash
+omni_python inorganic_demo.py
+omni_python inorganic_demo1.py
+omni_python organic_demo.py
 ```
-pip install "git+https://github.com/chemgymrl/chemgymrl.git@main"
-pip install gymnasium[classic-control]
-python -m chemistrylab.demo
-```
-
-The demo will help explain the individual benches.
+**:rocket:omni_python is Isaac_Sim's python.sh file, make sure he's added to your system variables!:rocket:**
