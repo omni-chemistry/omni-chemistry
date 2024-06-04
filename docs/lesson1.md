@@ -30,7 +30,7 @@ The primary functionalities of the ControllerManager class that are crucial for 
 
 In the context of a robotic simulation environment, the task of grasping and pouring involves a series of predefined actions that are executed by a robotic arm. The following pseudocode outlines the steps required to perform these tasks using the ControllerManager class:
 
-'''python
+'''bash
 // Define the controllers for each action
 pickmove_controller = new PickMoveController(name="pickmove_controller",cspace_controller=new RMPFlowController(name="pickmove_cspace_controller", robot_articulation=robot),gripper=robot.gripper)
 
