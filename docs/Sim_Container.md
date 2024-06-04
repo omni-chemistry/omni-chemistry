@@ -5,13 +5,15 @@ In this instructional module, we delve into the intricacies of the Simcontainer 
 As an integral component of the simulation environment, the Simcontainer class serves as the operational target for robotic arms, allowing for the execution of a plethora of tasks related to chemical experimentation.  This class provides a robust interface through which robotic agents can interact, ensuring a seamless integration of robotic manipulation with the simulated chemical processes.
 
 ## An example Sim_Container：
-To provide an example code for initialization, we first need to understand the parameters in the Sim_Container class and what they mean. Here is a table and description of the parameters in the initialization
+To provide an example code for initialization, we first need to understand the parameters in the Sim_Container class and what they mean. 
 
-'''bash
+```python
+
+# Create an instance of the Sim_Container class
+
 world = World()
 sim_container = world.scene.get_object("container_object")
 
-# Create an instance of the Sim_Container class
 sim_container_instance = Sim_Container(
     world=world,
     sim_container=sim_container,
@@ -21,4 +23,5 @@ sim_container_instance = Sim_Container(
     temp=25,  # Temperature of the container in degrees Celsius
     verbose=False  # Indicates not to output detailed information
 )
-'''
+```
+Here is a table and description of the parameters in the initialization.
