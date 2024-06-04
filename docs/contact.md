@@ -2,11 +2,11 @@
 
 # Contact Us
 
-Thank you for using ChemGymRL!
+Thank you for using Chemistry3D!
 
-Your feedback and suggestions relating to ChemGymRL are greatly appreciated.
+Your feedback and suggestions relating to Chemistry3D are greatly appreciated.
 
-You can find out more about the [research behind this project](https://markcrowley.ca/chemgymrl/) at Mark Crowley's research lab at UWaterloo.
-You can reach us at [chemgymrl@gmail.com](mailto:chemgymrl@gmail.com) or on social media at [@chemgymrl](https://twitter.com/chemgymrl) on Twitter (inactive due to Twitter horribleness) or soon on Mastodon at [@chemgymrl@sigmoid.social](https://sigmoid.social/@chemgymrl).
+You can reach us at [eis_hy@whu.edu.cn](mailto:eis_hy@whu.edu.cn),[lsj20@mails.tsinghua.edu.cn](mailto:lsj20@mails.tsinghua.edu.cn) 
+,[wu-t23@mails.tsinghua.edu.cn](mailto:wu-t23@mails.tsinghua.edu.cn) 
+,[georgeguo04@gmail.com](mailto:georgeguo04@gmail.com)
 
-If you find any bugs, or there are features you would like to see in ChemGymRL, you can create an Issue on github [here](https://github.com/chemgymrl/chemgymrl/issues). And of course, you can make a change yourself and offer it as a pull-request to integrate it into the growning framework for everyone to use!
