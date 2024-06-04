@@ -27,7 +27,7 @@ sim_container_instance = Sim_Container(
 Here is a table and description of the parameters in the initialization.
 
 |Parameter    | Type | Description |
-| ----------- | ----------- |
+| ----------- | ----------- |----------- |
 | world    | World      |The World object containing the simulation environment.    |
 | sim_container   | 	 xform    |The object representing the container in the simulation environment.     |
 | solute   | 	dict        |A dictionary containing solute substances and their quantities.      |
