@@ -9,7 +9,8 @@ Chemistry3D is an advanced chemistry simulation laboratory leveraging the capabi
 The development of this system aims to integrate chemical experiment simulation with robotic simulation environments, thereby enabling the visualization of chemical experiments while facilitating the simulation of realistic robotic operations. This environment supports the advancement of embodied intelligence for robots, the execution of reinforcement learning tasks, and other robotic operations. Through this integrated environment, we aspire to seamlessly combine chemical experiment simulation with robotic simulation, ultimately creating a comprehensive test environment for the entire chemical experimentation process.
 
 ## What can we do in Chemistry3D?
-* **Multiple chemical reaction simulation** Chemistry can simulate a range of organic and inorganic reactions.
+* **Multiple chemical reaction simulation**
+* Chemistry can simulate a range of organic and inorganic reactions.
 
 * **Robotic manipulaitions**
 *  In Chemistry3D, we have modularized the motion controllers for operations frequently encountered in chemistry experiments. A Controller Manager class has been established to manage these controllers and facilitate the integration of each module. Additionally, we support users in creating new controllers tailored to their specific needs, with the Controller Manager handling the management of these newly created controllers.
