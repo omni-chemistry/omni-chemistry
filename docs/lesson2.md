@@ -16,7 +16,7 @@ from Controllers.pick_move_controller import PickMoveController
 
 pickmove_controller =PickMoveController(name="pickmove_controller",cspace_controller=RMPFlowController(name="pickmove_cspace_controller", robot_articulation=robot),gripper=robot.gripper)
 
-actions = controller.forward(picking_position =  np.array([0.3,-0.3,0.1]),target_position = np.array([0.3,0.3,0.3]),current_joint_positions = current_observations["fancy_franka"]["joint_positions"])
+actions = controller.forward(picking_position =  np.array([0.3,-0.3,0.1]),target_position = np.array([0.3,0.3,0.3]),current_joint_positions = robot.get_joint_positions())
 
 robot.apply_action(actions)
 
