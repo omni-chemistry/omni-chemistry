@@ -1,29 +1,32 @@
-[chemgymrl.com](https://chemgymrl.com/)
+* **The first thing you need to do to develop and run demos for robotics operations is to make sure that Issac-Sim is already installed on your operating device.**
+* [**Issac—Sim**](https://docs.omniverse.nvidia.com/isaacsim/latest/index.html)See more details in this link
+* [**Chemistry3D Homepage**](https://www.omni-chemistry.com/#/)See more details in this link
+* [**Chemistry3D Document**](https://www.omni-chemistry.com/#/)See more details in this link
 
-# Installation
+# How to Download Chemistry3D
 
-Installing the chemgymrl library can be done by installing straight from the [ChemGymRL github repository](https://github.com/chemgymrl/chemgymrl). If you wish to make a lot of changes to the library and implement custom reactions, extractions etc. we recommend that you simply work out of the repository rather than install it as a library.
- 
-```
-pip install "git+https://github.com/chemgymrl/chemgymrl.git@main"
-```
+Follow the steps below to download the repository, navigate to the correct directory, and run the demo.
 
+## Step 1: Clone the Repository
 
-## Demo
+First, you need to clone the repository from GitHub. Open your terminal and run the following command:
 
-If you want to demo the benches, you will need to install the gymnasium classic control dependency. 
-```
-pip install gymnasium[classic-control]
-```
-
-
-Then you can play the benches with the following command:
-```
-python -m chemistrylab.demo
+```bash
+git clone https://github.com/WHU-DOUBLE/Chemistry3D.git
 ```
 
-The program allows you to select 
-- [Extraction Bench Demo](https://docs.chemgymrl.com/en/latest/chemistrylab.benches.html#chemistrylab.benches.extract_bench.WurtzExtractDemo_v0)
-- the [Reaction Bench Demo](https://docs.chemgymrl.com/en/latest/chemistrylab.benches.html#chemistrylab.benches.reaction_bench.FictReactDemo_v0)
-- or the [Distillation Bench Demo](https://docs.chemgymrl.com/en/latest/chemistrylab.benches.html#chemistrylab.benches.distillation_bench.WurtzDistillDemo_v0)
+## Step 2: Navigate to the Project Directory
 
+Once the repository is cloned, navigate to the project directory using the cd command:
+
+```bash
+cd Chemistry3D
+```
+
+## Step 3: Install Dependencies
+
+If the demo requires any dependencies, you need to install them first. Usually, you can find a requirements.txt file in the repository. You can install the dependencies with:
+
+```bash
+pip install -r requirements.txt
+```
