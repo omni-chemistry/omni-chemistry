@@ -25,3 +25,15 @@ sim_container_instance = Sim_Container(
 )
 ```
 Here is a table and description of the parameters in the initialization.
+
+|Parameter    | Type | Description |
+| ----------- | ----------- |
+| world    | World      |The World object containing the simulation environment.    |
+| sim_container   | 	 xform    |The object representing the container in the simulation environment.     |
+| solute   | 	dict        |A dictionary containing solute substances and their quantities.      |
+| org   |bool       |A flag indicating whether the container is organic.     |
+| volume   | float     |The volume of the container in liters. |
+| temp	   | float        |The temperature of the container in degrees Celsius.      |
+| verbose		   | bool        |A flag indicating whether to output detailed information.      |
+
+In this example, we create an instance of the Sim_Container class named sim_container_instance, which references a container entity named container_object in the simulation environment. We also set some solutes, specify that the container is organic, and define its volume and temperature. Finally, we set verbose to False, which means detailed information will not be output during initialization.
