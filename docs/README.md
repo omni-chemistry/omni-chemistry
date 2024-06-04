@@ -7,3 +7,5 @@ Chemistry3D is an advanced chemistry simulation laboratory leveraging the capabi
 ![1](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/483a7bd3-1718-4e0b-9d73-7546b81bbb1f)
 
 The development of this system aims to integrate chemical experiment simulation with robotic simulation environments, thereby enabling the visualization of chemical experiments while facilitating the simulation of realistic robotic operations. This environment supports the advancement of embodied intelligence for robots, the execution of reinforcement learning tasks, and other robotic operations. Through this integrated environment, we aspire to seamlessly combine chemical experiment simulation with robotic simulation, ultimately creating a comprehensive test environment for the entire chemical experimentation process.
+
+## What can we do in Chemistry3D?
