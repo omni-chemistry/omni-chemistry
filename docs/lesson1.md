@@ -33,25 +33,22 @@ In the context of a robotic simulation environment, the task of grasping and pou
 ```bash
 // Define the controllers for each action
 pickmove_controller = new PickMoveController(name="pickmove_controller",cspace_controller=new RMPFlowController(name="pickmove_cspace_controller", robot_articulation=robot),gripper=robot.gripper)
-
 pour_controller = new PourController(name="pour_controller",cspace_controller=new RMPFlowController(name="pour_cspace_controller", robot_articulation=robot),gripper=robot.gripper,Sim_Container1=Sim_Container1,Sim_Container2=self,pour_volume=pour_volume)
-
 
 // Add the controllers to the controller manager
 controller_manager.add_controller('pickmove_controller', pickmove_controller)
 controller_manager.add_controller('pour_controller', pour_controller)
 
-
 // Define the tasks with parameter templates
 controller_manager.add_task("pick", {
-    "picking_position": function(obs) { return obs[Sim_Container1.get_sim_container().name]["position"] },
-    "target_position": function(obs) { return obs[Sim_Container1.get_sim_container().name]["Pour_Position"] },
-    "current_joint_positions": function(obs) { return robot.get_joint_positions() },
+    "picking_position": function(obs) { obs[Sim_Container1.get_sim_container().name]["position"] },
+    "target_position": function(obs) { obs[Sim_Container1.get_sim_container().name]["Pour_Position"] },
+    "current_joint_positions": function(obs) { obs['robot'].get_joint_positions() },
 })
 controller_manager.add_task("pour", {
-    'franka_art_controller': robot.get_articulation_controller(),
-    "current_joint_positions": function(obs) { return robot.get_joint_positions() },
-    'current_joint_velocities': function(obs) { return robot.get_joint_velocities() },
+    'franka_art_controller': obs['robot'].get_articulation_controller(),
+    "current_joint_positions": function(obs) { obs['robot'].get_joint_positions() },
+    'current_joint_velocities': function(obs) { obs['robot'].get_joint_velocities() },
 })
 
 // Execute the tasks
@@ -69,3 +66,5 @@ To facilitate a comprehensive understanding of the ControllerManager class’s f
 
 
 Furthermore, the execute function plays a critical role in the operation of the ControllerManager. Its primary purpose is to invoke the current task’s controller, passing the appropriate parameters as defined in the task’s parameter template. The logic within the execute function orchestrates the interaction between the controller and the simulation, ensuring that each task is performed correctly and in the designated order. This function retrieves the current observations from the simulation, generates the task parameters based on the template and observations, and then calls the controller’s forward method to execute the task. If the controller indicates that it has completed its task, the ControllerManager proceeds to the next task in the sequence.
+
+
