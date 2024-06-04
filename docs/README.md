@@ -23,3 +23,5 @@ The development of this system aims to integrate chemical experiment simulation 
 
 * **Embodied intelligence**
 * In Chemistry3D, we have introduced multiple agents designed for generating and planning motion tasks. Users have the capability to create new agents and define prompts to accomplish specific tasks according to their requirements.
+
+![image](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/2bb20524-05e4-4c34-b810-3a8ae2d73b95)
