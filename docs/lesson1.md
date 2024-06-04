@@ -5,6 +5,8 @@ In this lesson, we will delve into the Controller_Manager class, which oversees 
 
 The Controller_Manager class can add, execute, and retrieve specified controllers, and it can systematically combine common operations in chemical experiment scenarios based on a linear queue of controllers. We will explore these features in detail later in this lesson. Let's begin with an overview of the basic functions in Controller_Manager.
 
+## Event Functions
+
 | Function Name     | Description |
 | ----------- | ----------- |
 | __init__    | Initialize the ControllerManager with the simulation world, robotic arm, and gripper.       |
