@@ -10,6 +10,7 @@
   - [Robot manipulation](robotmanipulation.md)
 
 - Tutorials
+  - [Sim_Container](Sim_Container.md)
   - [lesson 1](lesson1.md)
   - [lesson 2](lesson2.md)
 
