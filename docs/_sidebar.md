@@ -7,13 +7,14 @@
 
 - User Manual
   - [Chemical reactions](chemicalreaction.md)
-  - [Robot manipulation](robotmanipulation.md)
-
+    
 - Tutorials
   - [Sim_Container](Sim_Container.md)
   - [lesson 1](lesson1.md)
   - [lesson 2](lesson2.md)
-
+  - [Embodied Intelligence](Embodied_Intelligence.md)
+  - [Reinforcement Learning](Reinforcement_Learning.md)
+  
 - Contact
   - [About us](about.md)
   - [Contact us](contact.md)
