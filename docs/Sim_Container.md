@@ -1,6 +1,6 @@
 # Sim Container： Lesson
 
-![reaction](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/bfcb554f-d4a9-43d1-bc1c-901ec7cb8036)
+![image](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/20de54e8-e687-477b-b81e-d2816adc06ab)
 
 
 ## Introduction
