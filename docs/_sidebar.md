@@ -1,6 +1,3 @@
-- Documentation
-  - [Chemistry3D packages](package.md)
-
 - Getting started
   - [Installation](installation.md)
   - [Quick start](quickstart.md)
@@ -14,7 +11,6 @@
   - [Controlller](Controlller.md)
   - [Controlller Manager](Controller_Manager.md)
 
-  
 - Contact
   - [About us](about.md)
   - [Contact us](contact.md)
