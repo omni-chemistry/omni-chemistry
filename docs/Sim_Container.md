@@ -1,4 +1,6 @@
 # Sim Container： Lesson
+![image](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/d24c0843-bff3-4e53-92ce-d72dd79747c0)
+
 ## Introduction
 In this tutorial, we will explore the Sim_Container class, which is an extension of the Container class. The Sim_Container class is designed for simulating chemical reactions and interactions within the Isaac-Sim environment. It integrates physical and chemical simulation capabilities, allowing for detailed manipulation and analysis of chemical processes.
 
