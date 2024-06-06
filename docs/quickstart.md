@@ -1,5 +1,3 @@
-[chemgymrl.com](https://chemgymrl.com/)
-
 # Quick Start
 
 **To run the demo of chemistry experiment, follow these steps:**
