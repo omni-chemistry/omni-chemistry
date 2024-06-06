@@ -46,14 +46,22 @@ The output format for the prompt should be in JSON format as shown below:
 }
 ```
 
-Rules for Writing Prompts
+Rules for Writing Prompts：
+
 1.Controller Names: The name of each controller should match the purpose of the current task.
+
 2.Refer to Examples: Use examples and codes provided in the function descriptions to avoid bugs.
+
 3.No Line Breaks: The "Code" field in the JSON file should not contain line breaks; use \n to represent line breaks.
+
 4.Related Functions: Pay attention to related functions that often appear together.
+
 5.Code Indentation: Write the code directly after \n without spaces to avoid unexpected indent errors.
+
 6.Object Operations: Explicitly describe the operations to be performed on specific objects, such as grabbing or pouring a particular bottle.
+
 7.Predefined Functions: Use only the predefined functions as provided.
+
 
 ### Example Prompt
 Here is an example of how to write a prompt for adding controllers in a specific order:
