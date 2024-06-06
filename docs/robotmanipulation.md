@@ -84,8 +84,10 @@ Format the Code: Ensure the code is formatted correctly with \n to represent lin
 
 To ensure the code outputs correctly, we need some predefined functions. You can create a predefined functions file to store all the functions and add any newly created functions to it. When importing the prompt into the agent, concatenate the prompt with the functions file to ensure the code outputs correctly.
 
-```json
+```python
 {
+    # predefined_functions.py
+    
     def add_controller(name, controller):
         controller_manager.add_controller(name, controller)
     
@@ -97,8 +99,9 @@ To ensure the code outputs correctly, we need some predefined functions. You can
         # Define the PourController class
         pass
     
-    class PlaceController:
+    class ReturnController:
         # Define the ReturnController class
         pass
+
 }
 ```
