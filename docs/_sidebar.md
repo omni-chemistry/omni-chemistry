@@ -7,13 +7,13 @@
 
 - User Manual
   - [Chemical reactions](chemicalreaction.md)
-    
+  - [Embodied Intelligence](Embodied_Intelligence.md)
+  - [Reinforcement Learning](Reinforcement_Learning.md)
 - Tutorials
   - [Sim_Container](Sim_Container.md)
   - [Controlller](Controlller.md)
   - [Controlller Manager](Controller_Manager.md)
-  - [Embodied Intelligence](Embodied_Intelligence.md)
-  - [Reinforcement Learning](Reinforcement_Learning.md)
+
   
 - Contact
   - [About us](about.md)
