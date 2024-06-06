@@ -10,8 +10,8 @@
     
 - Tutorials
   - [Sim_Container](Sim_Container.md)
-  - [lesson 1](lesson1.md)
-  - [lesson 2](lesson2.md)
+  - [Controlller](Controlller.md)
+  - [Controlller Manager 2](Controlller_Manager.md)
   - [Embodied Intelligence](Embodied_Intelligence.md)
   - [Reinforcement Learning](Reinforcement_Learning.md)
   
