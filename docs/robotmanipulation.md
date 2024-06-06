@@ -5,7 +5,7 @@
 
 To evaluate the development capabilities of Chemistry3D in embodied intelligence tasks, we initially designed a chemical experiment scene. The laboratory setup included a table equipped with containers of (KMnO\textsubscript{4}) and (FeCl\textsubscript{2}), as well as two empty beakers. Within the overall framework, we constructed agents for robotic control. These agents were responsible for acquiring environmental information, generating robotic operation tasks, initializing different motion controllers, and managing robotic operations through the Controller Manager. The agents acquired information about the experimental scene, enabling the robot to observe interactive objects and generate potential chemical reactions based on its chemical reaction knowledge base. Subsequently, as shown in Figure above, we utilized natural language input to direct the robot to complete the relevant chemical experiment tasks.
 
-In this lesson, we'll talk about our agent fabrication process and how it's deployed in Chemistry3D. In Chemistry3D, a class named mas is responsible for managing all the agents. Let's first introduce the main functions in mas and their corresponding description.
+In this lesson, we'll talk about our agent fabrication process and how it's deployed in Chemistry3D. In Chemistry3D, a class named Multi-Agent System (MAS) is responsible for managing all the agents. Let's first introduce the main functions in mas and their corresponding description.
 
 ## Event Function
 | Function                          | Description                                                                                       |
@@ -24,66 +24,78 @@ In this lesson, we'll talk about our agent fabrication process and how it's depl
 | `_observations_to_string(self, observation)` | Converts observation dictionary into a descriptive string.                                   |
 
 
-## Workflow
+## How to Write Prompts for the Multi-Agent System (MAS)
 
-## Create your own prompt
+When working with the Multi-Agent System (MAS), it is essential to understand how to write effective prompts that guide the system to perform specific tasks. Here’s a detailed guide on composing prompts for MAS, including their structure and components. Here we will give an example of how to create an agent for adding controllers to controller manager.
 
-The input to the reaction bench is initialized in the `reaction_bench_v1.py` file. 
+### Components of a Prompt
 
-```python
-class GeneralWurtzReact_v2(GenBench):
-    """
-    Class to define an environment which performs a Wurtz extraction on materials in a vessel.
-    """
-    metadata = {
-        "render_modes": ["rgb_array"],
-        "render_fps": 10,
-    }
-    def __init__(self):
-        r_rew = RewardGenerator(use_purity=False,exclude_solvents=False,include_dissolved=False)
-        shelf = Shelf([
-            get_mat("diethyl ether",4,"Reaction Vessel"),
-            get_mat("1-chlorohexane",1),
-            get_mat("2-chlorohexane",1),
-            get_mat("3-chlorohexane",1),
-            get_mat("Na",3),
-        ])
-        actions = [
-            Action([0],    [ContinuousParam(156,307,0,(500,))],  'heat contact',   [0],  0.01,  False),
-            Action([1],    [ContinuousParam(0,1,1e-3,())],      'pour by percent',  [0],   0.01,   False),
-            Action([2],    [ContinuousParam(0,1,1e-3,())],      'pour by percent',  [0],   0.01,   False),
-            Action([3],    [ContinuousParam(0,1,1e-3,())],      'pour by percent',  [0],   0.01,   False),
-            Action([4],    [ContinuousParam(0,1,1e-3,())],      'pour by percent',  [0],   0.01,   False),
-        ]
+A prompt for MAS typically consists of several key sections that ensure the system comprehends the task and performs it accurately. These components are:
 
-        react_info = ReactInfo.from_json(REACTION_PATH+"/chloro_wurtz.json")
-        
-        super(GeneralWurtzReact_v2, self).__init__(
-            shelf,
-            actions,
-            ["PVT","spectra","targets"],
-            targets=react_info.PRODUCTS,
-            default_events = (Event("react", (Reaction(react_info),), None),),
-            reward_function=r_rew,
-            discrete=False,
-            max_steps=20
-        )
-```
+1. **Task Description**: Clearly explain the overall task being accomplished by the controllers added in order.
+2. **Code**: Provide the Python code required to add the controllers in the specified order. This code is written without line breaks and uses `\n` to represent line breaks.
 
-In here we pass parameters such as the materials and solutes needed for the experiment, the path to an input vessel 
-(if we're including one), the output vessel path, the number of time steps to be taken during each action, the amount
-of time taken in each time step, and an indication to show if spectral plots show overlapping. 
+**Task Description** is used to pass information across agents to ensure the consistency of the operation object, and **Code** is used to output the target code string. Here is an template in our prompt:
 
-We also pass in a reaction event which is constructed using a json file located in `chemistrylab/reactions/available_reactions`. This file includes important values that the engine will use to simulate the reaction. It contains information on the reactants, products, and solutes available to the reaction. Additionally, it includes arrays for the activation energy, stoichiometric coefficients, and concentration calculation coefficients. 
+The output format for the prompt should be in JSON format as shown below:
 
-## Output
+```json
+{   
+    "Task Description": "What task is being accomplished by the controllers added in order",
+    "Code": "Write Python code to add the controllers in order"
+}
 
-Once the reaction bench is reset and the render function is called, plots will appear showing data about the reaction 
-being performed by the agent.
+Rules for Writing Prompts
+1.Controller Names: The name of each controller should match the purpose of the current task.
+2.Refer to Examples: Use examples and codes provided in the function descriptions to avoid bugs.
+3.No Line Breaks: The "Code" field in the JSON file should not contain line breaks; use \n to represent line breaks.
+4.Related Functions: Pay attention to related functions that often appear together.
+5.Code Indentation: Write the code directly after \n without spaces to avoid unexpected indent errors.
+6.Object Operations: Explicitly describe the operations to be performed on specific objects, such as grabbing or pouring a particular bottle.
+7.Predefined Functions: Use only the predefined functions as provided.
 
-- Render
-    - Plots thermodynamic variables and spectral data. The human render plots a minimal amount of data and provides a 
-    'surface-level' understanding of the information portrayed.
-    - Plots absorbance, time, temperature, volume, pressure, and the amount of reactants remaining.
-  
-![human render output](tutorial_figures/reaction/human_render_reaction.png)
+### Example Prompt
+Here is an example of how to write a prompt for adding controllers in a specific order:
+
+The output format for the prompt should be in JSON format as shown below:
+
+```json
+{
+    "Task Description": "Grabbing a bottle of medicine, pouring its contents into a beaker, and then returning the bottle to its original position.",
+    "Code": "controller_manager.add_controller('pick_move_controller', PickMoveController())\ncontroller_manager.add_controller('pour_controller', PourController())\ncontroller_manager.add_controller('return_controller', ReturnController())"
+}
+
+Rules for Writing Prompts
+1.Controller Names: The name of each controller should match the purpose of the current task.
+2.Refer to Examples: Use examples and codes provided in the function descriptions to avoid bugs.
+3.No Line Breaks: The "Code" field in the JSON file should not contain line breaks; use \n to represent line breaks.
+4.Related Functions: Pay attention to related functions that often appear together.
+5.Code Indentation: Write the code directly after \n without spaces to avoid unexpected indent errors.
+6.Object Operations: Explicitly describe the operations to be performed on specific objects, such as grabbing or pouring a particular bottle.
+7.Predefined Functions: Use only the predefined functions as provided.
+
+
+Detailed Steps
+Identify the Task: Clearly define what the task is and which objects are involved.
+Write the Code: Using the examples and predefined functions, write the code to add the controllers in the correct sequence.
+Format the Code: Ensure the code is formatted correctly with \n to represent line breaks and no additional spaces that might cause indentation errors.
+
+To ensure the code outputs correctly, we need some predefined functions. You can create a predefined functions file to store all the functions and add any newly created functions to it. When importing the prompt into the agent, concatenate the prompt with the functions file to ensure the code outputs correctly.
+
+```json
+{
+    def add_controller(name, controller):
+        controller_manager.add_controller(name, controller)
+    
+    class PickMoveController:
+        # Define the PickMoveController class
+        pass
+    
+    class PourController:
+        # Define the PourController class
+        pass
+    
+    class PlaceController:
+        # Define the ReturnController class
+        pass
+}
