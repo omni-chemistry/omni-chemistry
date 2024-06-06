@@ -11,7 +11,7 @@
 - Tutorials
   - [Sim_Container](Sim_Container.md)
   - [Controlller](Controlller.md)
-  - [Controlller Manager 2](Controller_Manager.md)
+  - [Controlller Manager](Controller_Manager.md)
   - [Embodied Intelligence](Embodied_Intelligence.md)
   - [Reinforcement Learning](Reinforcement_Learning.md)
   
