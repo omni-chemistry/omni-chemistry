@@ -5,7 +5,7 @@
 
 To evaluate the development capabilities of Chemistry3D in embodied intelligence tasks, we initially designed a chemical experiment scene. The laboratory setup included a table equipped with containers of (KMnO\textsubscript{4}) and (FeCl\textsubscript{2}), as well as two empty beakers. Within the overall framework, we constructed agents for robotic control. These agents were responsible for acquiring environmental information, generating robotic operation tasks, initializing different motion controllers, and managing robotic operations through the Controller Manager. The agents acquired information about the experimental scene, enabling the robot to observe interactive objects and generate potential chemical reactions based on its chemical reaction knowledge base. Subsequently, as shown in Figure above, we utilized natural language input to direct the robot to complete the relevant chemical experiment tasks.
 
-In this lesson, we'll talk about our agent fabrication process and how it's deployed in Chemistry3D
+In this lesson, we'll talk about our agent fabrication process and how it's deployed in Chemistry3D. In Chemistry3D, a class named mas is responsible for managing all the agents. Let's first introduce the main functions in mas and their corresponding description.
 
 ## Event Function
 | Function                          | Description                                                                                       |
@@ -24,7 +24,9 @@ In this lesson, we'll talk about our agent fabrication process and how it's depl
 | `_observations_to_string(self, observation)` | Converts observation dictionary into a descriptive string.                                   |
 
 
-## Input
+## Workflow
+
+## Create your own prompt
 
 The input to the reaction bench is initialized in the `reaction_bench_v1.py` file. 
 
