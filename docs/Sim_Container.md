@@ -1,8 +1,9 @@
 # Sim Container： Lesson
+## Introduction
+In this tutorial, we will explore the Sim_Container class, which is an extension of the Container class. The Sim_Container class is designed for simulating chemical reactions and interactions within the Isaac-Sim environment. It integrates physical and chemical simulation capabilities, allowing for detailed manipulation and analysis of chemical processes.
 
-In this instructional module, we delve into the intricacies of the Simcontainer class, which is an advanced extension of the Container class tailored for use within a simulation environment.  This specialized class has been designed to facilitate the integration of the Container entity into the simulation framework, thereby enabling the simulation of chemical processes within the Container.  The Simcontainer class not only encapsulates the fundamental functionalities of the Container class but also augments them with additional features that cater to the specific requirements of the simulation context.
-
-As an integral component of the simulation environment, the Simcontainer class serves as the operational target for robotic arms, allowing for the execution of a plethora of tasks related to chemical experimentation.  This class provides a robust interface through which robotic agents can interact, ensuring a seamless integration of robotic manipulation with the simulated chemical processes.
+## What is SimContainer?
+Sim_Container is a specialized class that inherits from the Container class, designed to handle chemical reactions within a simulated environment. This class not only manages solute information, volume, and temperature but also integrates with a physics simulator to represent physical properties and behaviors of chemical substances.
 
 ## An example Sim_Container：
 To provide an example code for initialization, we first need to understand the parameters in the Sim_Container class and what they mean. 
@@ -37,3 +38,22 @@ Here is a table and description of the parameters in the initialization.
 | verbose		   | bool        |A flag indicating whether to output detailed information.      |
 
 In this example, we create an instance of the Sim_Container class named sim_container_instance, which references a container entity named container_object in the simulation environment. We also set some solutes, specify that the container is organic, and define its volume and temperature. Finally, we set verbose to False, which means detailed information will not be output during initialization.
+
+## Event Function：
+
+| Function Name       | Description                                                                                       |
+|---------------------|---------------------------------------------------------------------------------------------------|
+| `__init__`          | Initialize the Sim_Container with the world, sim_container, object, solute, volume, temperature, and verbosity.|
+| `get_color`         | Retrieve the color based on the organic property and solute information.                           |
+| `sim_update`        | Update simulation with the new state and task details for the controller.                          |
+| `set_sim_container` | Set the simulation container.                                                                     |
+| `get_sim_container` | Get the current simulation container.                                                             |
+| `set_object`        | Update the object dictionary.                                                                     |
+| `get_object`        | Get the current object dictionary.                                                                |
+| `add_liquid`        | Add a liquid to the liquid list.                                                                  |
+| `remove_solid`      | Remove a solid from the solid list.                                                               |
+| `melt_solid`        | Melt and remove solid objects.                                                                    |
+| `create_liquid`     | Create a new liquid in the simulation.                                                            |
+| `remove_liquid`     | Remove a liquid from the liquid list if it exists.                                                |
+| `add_solid`         | Add a solid to the solid list.                                                                    |
+| `remove_solid`      | Remove a solid from the solid list if it exists.     
