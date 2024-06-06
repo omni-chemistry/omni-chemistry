@@ -105,3 +105,8 @@ To ensure the code outputs correctly, we need some predefined functions. You can
 
 }
 ```
+## How to Use the Multi-Agent System (MAS) and Add Corresponding Agents
+This tutorial explains how to use the Multi-Agent System (MAS) for managing and simulating chemical reactions and robotics control in a simulated environment. We will guide you through adding agents and using the MAS with appropriate prompts and predefined functions.
+
+### Overview
+The MAS is designed to facilitate the control of robotic tasks and chemical simulations by leveraging multiple agents that work together. Each agent is responsible for different aspects of the system, from generating controllers to handling reactions.
