@@ -44,6 +44,7 @@ The output format for the prompt should be in JSON format as shown below:
     "Task Description": "What task is being accomplished by the controllers added in order",
     "Code": "Write Python code to add the controllers in order"
 }
+```
 
 Rules for Writing Prompts
 1.Controller Names: The name of each controller should match the purpose of the current task.
@@ -64,6 +65,7 @@ The output format for the prompt should be in JSON format as shown below:
     "Task Description": "Grabbing a bottle of medicine, pouring its contents into a beaker, and then returning the bottle to its original position.",
     "Code": "controller_manager.add_controller('pick_move_controller', PickMoveController())\ncontroller_manager.add_controller('pour_controller', PourController())\ncontroller_manager.add_controller('return_controller', ReturnController())"
 }
+```
 
 Rules for Writing Prompts
 1.Controller Names: The name of each controller should match the purpose of the current task.
@@ -99,3 +101,4 @@ To ensure the code outputs correctly, we need some predefined functions. You can
         # Define the ReturnController class
         pass
 }
+```
