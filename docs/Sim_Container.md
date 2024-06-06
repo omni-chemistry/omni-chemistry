@@ -5,7 +5,7 @@ In this tutorial, we will explore the Sim_Container class, which is an extension
 ## What is SimContainer?
 Sim_Container is a specialized class that inherits from the Container class, designed to handle chemical reactions within a simulated environment. This class not only manages solute information, volume, and temperature but also integrates with a physics simulator to represent physical properties and behaviors of chemical substances.
 
-## An example Sim_Container：
+## An example init Sim_Container：
 To provide an example code for initialization, we first need to understand the parameters in the Sim_Container class and what they mean. 
 
 ```python
@@ -60,54 +60,55 @@ In this example, we create an instance of the Sim_Container class named sim_cont
 
 ### Method Descriptions
 
-#### get_color
+#### '''get_color()'''
 
 The `get_color` method determines the color of the container's content based on whether it is organic or inorganic, and its solute information. This is useful for visualizing the contents of the container in the simulation environment.
 
-#### sim_update
+#### '''sim_update()'''
 
 The `sim_update` method updates the simulation state with new parameters and tasks for the controllers. It configures tasks like picking, pouring, and returning containers, and integrates these tasks with the robotic controllers in Isaac-Sim.
 
-#### set_sim_container
+#### '''set_sim_container()'''
 
 This method sets the simulation container to a new container, allowing for dynamic changes in the simulation setup.
 
-#### get_sim_container
+#### '''get_sim_container()'''
 
 This method retrieves the current simulation container, providing access to the container's properties and state.
 
-#### set_object
+#### '''set_object()'''
 
 The `set_object` method updates the object dictionary, which keeps track of the liquid and solid objects in the simulation.
 
-#### get_object
+#### '''get_object()'''
 
 This method retrieves the current object dictionary, providing information about the liquid and solid objects in the container.
 
-#### add_liquid
+#### '''add_liquid()'''
 
 The `add_liquid` method adds a liquid to the liquid list in the object dictionary, enabling the simulation of adding liquids to the container.
 
-#### remove_solid
+#### '''remove_solid()'''
 
 This method removes a solid from the solid list in the object dictionary, simulating the removal of solid objects from the container.
 
-#### melt_solid
+#### '''melt_solid()'''
 
 The `melt_solid` method melts and removes solid objects, simulating the process of solids melting into liquids.
 
-#### create_liquid
+#### '''create_liquid()'''
 
 The `create_liquid` method creates a new liquid in the simulation, adding it to the liquid list in the object dictionary.
 
-#### remove_liquid
+#### '''remove_liquid()'''
 
 This method removes a liquid from the liquid list if it exists, simulating the removal of liquids from the container.
 
-#### add_solid
+#### '''add_solid()'''
 
 The `add_solid` method adds a solid to the solid list in the object dictionary, simulating the addition of solid objects to the container.
 
-
+## An example of using Sim_Container
+If you want to use Sim_Container for a chemical simulation task, you can use the following example：
 
 
