@@ -1,8 +1,28 @@
 
 # Embodied Intelligence
-[Uploading Embodied_Ai.pdf…]()
+![image](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/f368d4b7-5afe-4af2-b3de-97f81edcd80e)
+
 
 To evaluate the development capabilities of Chemistry3D in embodied intelligence tasks, we initially designed a chemical experiment scene. The laboratory setup included a table equipped with containers of (KMnO\textsubscript{4}) and (FeCl\textsubscript{2}), as well as two empty beakers. Within the overall framework, we constructed agents for robotic control. These agents were responsible for acquiring environmental information, generating robotic operation tasks, initializing different motion controllers, and managing robotic operations through the Controller Manager. The agents acquired information about the experimental scene, enabling the robot to observe interactive objects and generate potential chemical reactions based on its chemical reaction knowledge base. Subsequently, as shown in Figure above, we utilized natural language input to direct the robot to complete the relevant chemical experiment tasks.
+
+In this lesson, we'll talk about our agent fabrication process and how it's deployed in Chemistry3D
+
+## Event Function
+| Function                          | Description                                                                                       |
+|-----------------------------------|---------------------------------------------------------------------------------------------------|
+| `__init__(self, world, controller_manager)` | Initializes the MAS class, setting the simulation world and controller manager.                |
+| `agents_initialization(self)`     | Initializes agents for different tasks and loads their system prompts.                           |
+| `_update_system_prompts(self)`    | Updates system prompts for all agents.                                                           |
+| `_generate_plan(self, controllers_str)` | Generates a plan for a given task.                                                           |
+| `_response_reaction(self, expected_chem)` | Responds to a chemical reaction, returning the response message.                               |
+| `_add_particles(self)`            | Adds particles for each object.                                                                  |
+| `_add_sim_container(self, particle_set_str)` | Adds simulation containers for each object.                                                 |
+| `_add_rigidbody(self)`            | Adds rigidbody for each object.                                                                  |
+| `_add_controllers(self, controllers_str)` | Adds controllers for a given task.                                                           |
+| `_add_tasks(self, controllers_str)` | Adds tasks for a given controller.                                                            |
+| `_generate_controllers(self, prompt, observation)` | Generates controllers for a given task.                                                      |
+| `_observations_to_string(self, observation)` | Converts observation dictionary into a descriptive string.                                   |
+
 
 ## Input
 
