@@ -48,7 +48,7 @@ class Container:
 
 #### `get_info(self, verbose=False)`
 -   **Implementation Logic:**
-    - The interface in simulator is invoked to obtain the representational content by means of computation or information retrieval
+    - Utilizing the interfaces within the simulator, characterization content can be obtained through computational methods or information retrieval.
 
 -   **Return Value:**
     - A dictionary containing all the information about the representations about the current product.
