@@ -6,7 +6,7 @@
 >
 > Read our paper: [arXiv:2406.08160](https://arxiv.org/abs/2406.08160)
 > 
-> Visit our github: [Chemistry3D](https://github.com/huangyan28/Chemistry3D)
+> Visit our github: [Chemistry3D Repository](https://github.com/huangyan28/Chemistry3D)
 
 
 Chemistry3D is an advanced chemistry simulation laboratory leveraging the capabilities of IsaacSim. This platform offers a comprehensive suite of both organic and inorganic chemical experiments, which can be conducted in a simulated environment. One of the distinguishing features of Chemistry3D is its ability to facilitate robotic operations within these experiments. The primary objective of this simulation environment is to provide a robust and reliable testing ground for both experimental procedures and the application of robotics within chemical laboratory settings.
