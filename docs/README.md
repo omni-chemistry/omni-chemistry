@@ -1,10 +1,14 @@
 # Chemistry3D
 
-> Welcome to Chemistry3D’s documentation!
+> **Welcome to Chemistry3D’s documentation!**
+>
+> Visit our website: [Chemistry3D](https://sites.google.com/view/chemistry3d)
+>
+> Read our paper: [arXiv:2406.08160](https://arxiv.org/abs/2406.08160)
 
 Chemistry3D is an advanced chemistry simulation laboratory leveraging the capabilities of IsaacSim. This platform offers a comprehensive suite of both organic and inorganic chemical experiments, which can be conducted in a simulated environment. One of the distinguishing features of Chemistry3D is its ability to facilitate robotic operations within these experiments. The primary objective of this simulation environment is to provide a robust and reliable testing ground for both experimental procedures and the application of robotics within chemical laboratory settings.
 
-![1](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/483a7bd3-1718-4e0b-9d73-7546b81bbb1f)
+
 
 The development of this system aims to integrate chemical experiment simulation with robotic simulation environments, thereby enabling the visualization of chemical experiments while facilitating the simulation of realistic robotic operations. This environment supports the advancement of embodied intelligence for robots, the execution of reinforcement learning tasks, and other robotic operations. Through this integrated environment, we aspire to seamlessly combine chemical experiment simulation with robotic simulation, ultimately creating a comprehensive test environment for the entire chemical experimentation process.
 
@@ -24,4 +28,3 @@ The development of this system aims to integrate chemical experiment simulation 
 * **Embodied intelligence**
 * In Chemistry3D, we have introduced multiple agents designed for generating and planning motion tasks. Users have the capability to create new agents and define prompts to accomplish specific tasks according to their requirements.
 
-![image](https://github.com/omni-chemistry/omni-chemistry/assets/171568986/2bb20524-05e4-4c34-b810-3a8ae2d73b95)
