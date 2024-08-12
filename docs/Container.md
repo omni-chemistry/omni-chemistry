@@ -7,6 +7,18 @@ The original code is included in `inorganic_example.py`,`organic_example.py`
 The container binds chemical information to simulated reagent bottles, facilitating clear demonstrations. It also aligns chemical reactions with operational actions, making the simulation intuitive. 
 This integrated simulating method allows for accurate predictions and detailed representation calculations.
 
+Solute information will be specified during the initialization of the `Container` class. It includes three main parameters:
+- The `solute` parameter is a dictionary that contains the solute's name and amount.
+- The `volume` parameter specifies the total volume of the solution.
+- The `org` parameter distinguishes between organic and inorganic reactions.
+
+Additionally, the `Container` class includes:
+- A `temp` parameter to customize the temperature (default is 25°C).
+- A `verbose` parameter for controlling the level of output detail during simulations.
+
+The example can be found at the link below:
+https://github.com/huangyan28/Chemistry3D/blob/master/chem_sim/organic_example.py
+
 ```python
 class Container:
     """
